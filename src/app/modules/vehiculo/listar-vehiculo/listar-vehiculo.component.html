@@ -1,0 +1,46 @@
+<div class="py-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <img
+            class="card-img-top"
+            src="../../../../assets/img/vehiculo.png"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <div>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Marca</th>
+                    <th scope="col">Línea</th>
+                    <th scope="col">Modelo</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let v of vehiculos">
+                    <th scope="row">{{ v.id }}</th>
+                    <td [id]="v.marca">{{ v.marca }}</td>
+                    <td [id]="v.linea">{{ v.linea }}</td>
+                    <td [id]="v.modelo">{{ v.modelo }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <ul class="list-group">
+              <li
+                *ngFor="let item of totalMarcas"
+                class="list-group-item d-flex justify-content-between align-items-center"
+              >
+                Total {{item.marca}}
+                <span class="badge badge-secondary badge-pill">{{item.total}}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
